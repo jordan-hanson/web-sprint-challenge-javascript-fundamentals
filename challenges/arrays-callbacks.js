@@ -66,6 +66,10 @@ The zoos need to know their total animal population across the United States. Fi
 // let populationTotal = 0;
 // console.log(populationTotal);
 
+let populationTotal = zooAnimals.reduce(function (counter, mammal) {
+  return counter + mammal.population
+}, 0)
+console.log("Total population in the United States is " + populationTotal)
 
 // ==== Callbacks ====  
 
