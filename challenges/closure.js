@@ -18,7 +18,15 @@ myFunction();
 
 // Explanation: 
 
+// The const variable can be global or local. It is able to be accessed outside of nestedFunction because it is taking on the task of being global.
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function summnation(num) {
+  let add = num += num
+  console.log(add)
+  return add
+}
+
+summnation(4)
