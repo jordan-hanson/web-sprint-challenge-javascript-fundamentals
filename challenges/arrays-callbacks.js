@@ -14,7 +14,18 @@ const zooAnimals = [
   { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
   { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
 ];
-
+const originAnimals = [
+  { origin_name: "Africa" },
+  { origin_name: "South America" },
+  { origin_name: "United States" },
+  { origin_name: "New Zealand" },
+  { origin_name: "Mexico" },
+  { origin_name: "England" },
+  { origin_name: "Austrailia" },
+  { origin_name: "Alaska" },
+  { origin_name: "Guatamala" },
+  { origin_name: "Madagascar" },
+]
 /* Request 1: .forEach()
 
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
@@ -79,8 +90,15 @@ console.log("Total population in the United States is " + populationTotal)
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+let consume = (a, b, cb) => {
+  for (let i in a) {
+    cb(`The ${a[i].animal_name} is from the origin of ${b}`)
+  }
+}
 
-
+consume(zooAnimals, "Africa", function (val) {
+  console.log(val)
+})
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers
